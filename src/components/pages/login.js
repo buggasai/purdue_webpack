@@ -49,7 +49,7 @@ export default class Login extends React.Component {
               <div className="logo">
                 <a href="#">
                   <img
-                    src="/img/Logo.png"
+                    src="/img/purdue_logo.png"
                     width="125"
                     title="Precision for Value"
                   />
