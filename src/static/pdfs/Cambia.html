@@ -1,0 +1,396 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>PDF Template</title>
+    <style>
+        @font-face {
+            font-family: 'ProximaNova-Regular';
+            src: url('/css/fonts/ProximaNova-Regular.otf');
+        }
+
+        @font-face {
+            font-family: 'Helvetica LT Condensed Medium';
+            src: url('/css/fonts/Helvetica LT Condensed Medium.ttf');
+        }
+
+        body {
+            font-family: Proxima Nova;
+            font-size: 12px;
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+            float: left;
+            background: #ccc;
+            height: 100%;
+        }
+
+        p {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .container {
+            width: 770px;
+            margin: 0px auto;
+            height: 1090px;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        .mid_container {
+            padding: 37px 75px 0px;
+            width: 620px;
+            margin: 0px auto;
+            height: auto;
+            overflow: hidden;
+        }
+
+        .header {
+            float: left;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .title {
+            float: right;
+            text-align: right;
+        }
+
+        .title p {
+            font-size: 8.19pt;
+            color: #0b0b0b;
+            line-height: 16px;
+        }
+
+        .title p span {
+            font-size: 8.19pt;
+            color: #ac0772;
+        }
+
+        .message {
+            float: left;
+            width: 100%;
+            margin-bottom: 15px;
+            margin-top: 40px;
+        }
+
+        .message p {
+            float: left;
+            width: 100%;
+            color: #505050;
+            font-size: 16.8pt;
+            line-height: 28px;
+            padding: 0px;
+        }
+
+        .message p span {
+            color: #ac0772;
+        }
+
+        .table_heading {
+            font-size: 14.4pt;
+            color: #505050;
+        }
+
+        .datagrid table {
+            border-collapse: collapse;
+            text-align: left;
+            width: 100%;
+        }
+
+        .datagrid {
+            background: #fff;
+            margin: 10px 0;
+            overflow: hidden;
+            border: 1px solid #ac0772;
+            -webkit-border-radius: 15px;
+            -moz-border-radius: 15px;
+            border-radius: 15px;
+        }
+
+        .datagrid table th {
+            padding: 10px 5px;
+            text-align: center;
+            font-size: 10.32pt;
+        }
+
+        .datagrid table td {
+            padding: 5px 5px;
+            text-align: center;
+            font-size: 10.32pt;
+        }
+
+        .datagrid table thead th {
+            background: #ac0772;
+            color: #FFFFFF;
+            font-size: 10.32pt;
+            font-weight: bold;
+            border-left: 1px solid #ac0772;
+        }
+
+        .datagrid table thead th:first-child {
+            border: none;
+        }
+
+        .datagrid table tbody td {
+            color: #00496B;
+            border-bottom: 1px solid #E1EEF4;
+            font-size: 8.4pt;
+            font-weight: normal;
+        }
+
+        .datagrid table tbody .alt td {
+            background: #E1EEF4;
+            color: #00496B;
+        }
+
+        .datagrid table tbody td:first-child {
+            border-left: none;
+        }
+
+        .datagrid table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .datagrid table tfoot td div {
+            border-top: 1px solid #006699;
+            background: #E1EEF4;
+        }
+
+        .datagrid table tfoot td {
+            padding: 0;
+            font-size: 12px
+        }
+
+        .datagrid table tfoot td div {
+            padding: 2px;
+        }
+
+        .datagrid table tfoot td ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-align: right;
+        }
+
+        .warning_content {
+            border: 1px solid #000;
+            float: left;
+            width: 100%;
+            font-family: "Times New Roman";
+            margin-bottom: 10px;
+        }
+
+        .warning_content h4 {
+            color: #070707;
+            font-size: 6.96pt;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .warning_content h5 {
+            color: #070707;
+            font-size: 6.96pt;
+            font-weight: bold;
+            text-align: left;
+            font-weight: bold;
+            margin-left: 15px;
+            text-decoration: underline;
+            margin-bottom: 0px;
+            margin-top: 0px;
+        }
+
+        .warning_content ul {
+            margin-left: -17px;
+            margin-top: 5px;
+        }
+
+        .warning_content ul li {
+            font-size: 6.72pt;
+            font-weight: bold;
+            line-height: 14px;
+            list-style: disc;
+        }
+
+        .content {
+            width: 100%;
+            float: left;
+            margin-bottom: 50px;
+        }
+
+        .content p {
+            color: #070707;
+            margin-bottom: 5px;
+            float: left;
+            width: 100%;
+            font-size: 7.66pt;
+        }
+
+        .footer_head {
+            width: 100%;
+            float: left;
+            text-align: center;
+            font-size: 9.18pt;
+            color: #004f9e;
+            padding-top: 165px;
+        }
+
+        .footer_content {
+            float: left;
+            width: 100%;
+            height: auto;
+            font-family: Helvetica LT Condensed Medium;
+            background: #ac0772;
+            line-height: 25px;
+        }
+
+        .footer_content p {
+            font-size: 6.96pt;
+            color: #fff;
+            width: 70%;
+            padding: 5px 25px;
+            float: left;
+        }
+
+        .footer_content img {
+            float: right;
+            position: absolute;
+            width: 160px;
+            margin: 6px 0;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Container Start -->
+
+        <!-- mid-container Start -->
+        <div class="mid_container">
+            <!-- Header Start -->
+            <div class="header">
+                <img src="/img/logo_header.png" alt="Logo" title="Logo" width="180" />
+
+                <div class="title">
+                    <p>This formulary information is prepared for <br><span>[Prefix] [First Name] [Last Name] [, Suffix].</span></p>
+                </div>
+            </div>
+            <!-- Header End -->
+
+            <!-- Message Start -->
+            <div class="message">
+                <p><span>[Percentage]</span> of your <span>[Patients]</span> have unrestricted access to <br> CAMBIA® and pay
+                    <span>[Copay]</span>.*</p>
+            </div>
+            <!-- Message End -->
+
+            <!-- Table Start -->
+            <p class="table_heading">This includes patients enrolled in the following:</p>
+            <div class="datagrid">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Channel</th>
+                            <th>Plan Name</th>
+                            <th>Formulary Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>[Channel]</td>
+                            <td>[Plan Name]</td>
+                            <td>[Formulary Status]</td>
+                        </tr>
+                        <tr>
+                            <td>[Channel]</td>
+                            <td>[Plan Name]</td>
+                            <td>[Formulary Status]</td>
+                        </tr>
+                        <tr>
+                            <td>[Channel]</td>
+                            <td>[Plan Name]</td>
+                            <td>[Formulary Status]</td>
+                        </tr>
+                        <tr>
+                            <td>[Channel]</td>
+                            <td>[Plan Name]</td>
+                            <td>[Formulary Status]</td>
+                        </tr>
+                        <tr>
+                            <td>[Channel]</td>
+                            <td>[Plan Name]</td>
+                            <td>[Formulary Status]</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- Table End -->
+
+            <!-- Warning Box Start -->
+            <div class="warning_content">
+                <h4>WARNING: RISK OF SERIOUS CARDIOVASCULAR AND GASTROINTESTINAL EVENTS</h4>
+
+                <h5>Cardiovascular Thrombotic Events</h5>
+                <ul>
+                    <li>Non-steroidal anti-inflammatory drugs (NSAIDs) cause an increased risk of serious cardiovascular thrombotic
+                        events, including myocardial infarction, and stroke, which can be fatal. This risk may occur early
+                        in treatment and may increase with duration of use. </li>
+                    <li>CAMBIA® is contraindicated in the setting of coronary artery bypass graft (CABG) surgery.</li>
+                </ul>
+
+                <h5>Gastrointestinal Risk, Ulceration, and Perforation</h5>
+                <ul>
+                    <li>NSAIDs cause an increased risk of serious gastrointestinal (GI) adverse events including bleeding, ulceration,
+                        and perforation of the stomach or intestines, which can be fatal. These events can occur at any time
+                        during use and without warning symptoms. Elderly patients and patients with a prior history of peptic
+                        ulcer disease and/or GI bleeding are at greater risk for serious GI events.</li>
+                </ul>
+            </div>
+            <!-- Warning Box End -->
+
+            <!-- Content Start -->
+            <div class="content">
+                <p>*Data on file. Depomed, Inc. formulary data is sourced from MMIT. Transaction data is sourced from SHA Health.
+                    Data is current as of [Month, Year].</p>
+                <p>Because formularies are subject to change, and many health plans offer more than one formulary, please check
+                    directly with the health plan to confirm coverage for individual plans. The information provided is not
+                    a guarantee of coverage or payment (partial or full). Actual benefits are determined by each plan administrator
+                    in accordance with its respective policy and procedures. Please consult health plan for patient specific
+                    coverage details.</p>
+                <p>Formulary Tier reported is representative of the coverage of the majority of members covered by the plan.
+                    Individual coverage may vary.</p>
+                <p>Your area is determined as the geography associated with all ZIP codes around you that have the same first
+                    three digits.</p>
+                <p>Unrestricted access in your area is computed as a ratio of members enrolled in plans that have no prior authorization
+                    or step edits for the brand to the total members enrolled in all plans in the area.</p>
+                <p>Copay is computed based on the average cost share for brand claims in your area for members enrolled in plans
+                    that have unrestricted access to brand. Only those unrestricted plans that have an average copay value
+                    less than the set threshold are displayed.</p>
+                <p>Material developed for communication only to healthcare professionals. Not approved for distribution to patients.</p>
+            </div>
+            <!-- Content Start -->
+
+            <div class="footer_head">
+                <p>Please see accompanying full Prescribing Information and Medication Guide for more information about CAMBIA®.</p>
+            </div>
+        </div>
+        <!-- mid-container Start -->
+
+        <!-- Footer Start -->
+        <div class="footer_content">
+            <p>Depomed and the Depomed logo, Cambia® and the Cambia® logo are registered trademarks of Depomed, Inc. or its
+                related companies. All other trademarks are the property of their respective owners.</p>
+            <p>© 2016 Depomed, Inc. All rights reserved. Printed in the U.S.A. APL-CAM-0195 Rev. 2 [Month, Year]</p>
+            <img src="/img/logo_footer.png" alt="Depomed Logo" title="Depomed Logo" />
+        </div>
+        <!-- Footer End -->
+
+    </div>
+    <!-- Container End -->
+</body>
+
+</html>

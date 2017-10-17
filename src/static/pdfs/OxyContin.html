@@ -1,0 +1,446 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>PDF Template</title>
+    <style>
+        @font-face {
+            font-family: 'HelveticaNeueLTPro-Bd';
+            src: url('/css/fonts/HelveticaNeueLTPro-Bd.otf');
+        }
+
+        @font-face {
+            font-family: 'HelveticaNeueLTPro-BdCn';
+            src: url('/css/fonts/HelveticaNeueLTPro-BdCn.otf');
+        }
+
+        @font-face {
+            font-family: 'HelveticaNeueLTPro-BdIt';
+            src: url('/css/fonts/HelveticaNeueLTPro-BdIt.otf');
+        }
+
+        @font-face {
+            font-family: 'HelveticaNeueLTPro-Lt';
+            src: url('/css/fonts/HelveticaNeueLTPro-Lt.otf');
+        }
+
+        @font-face {
+            font-family: 'HelveticaNeueLTPro-Md';
+            src: url('/css/fonts/HelveticaNeueLTPro-Md.otf');
+        }
+
+        @font-face {
+            font-family: 'HelveticaNeueLTPro-MdCn';
+            src: url('/css/fonts/HelveticaNeueLTPro-MdCn.otf');
+        }
+
+        @font-face {
+            font-family: 'HelveticaNeueLTPro-Roman';
+            src: url('/css/fonts/HelveticaNeueLTPro-Roman.otf');
+        }
+
+        body {
+            font-family: 'HelveticaNeueLTPro-Md';
+            font-size: 12px;
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+            float: left;
+            background: #ccc;
+            height: 100%;
+        }
+
+        p {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .container {
+            width: 770px;
+            margin: 0px auto;
+            height: 1090px;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        .mid_container {
+            padding: 25px 75px 5px;
+            width: 620px;
+            margin: 0px auto;
+            height: auto;
+            overflow: hidden;
+        }
+
+        .header {
+            float: left;
+            width: 100%;
+            margin-bottom: 5px;
+        }
+
+        .title {
+            float: right;
+        }
+
+        .title p {
+            font-size: 8pt;
+            font-family: 'HelveticaNeueLTPro-Roman';
+            color: #000000;
+            line-height: 16px;
+            width: 170px;
+        }
+
+        .title p span {
+            font-size: 8.19pt;
+            color: #ac0772;
+        }
+
+        .message {
+            float: left;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .message p {
+            float: left;
+            width: 100%;
+            color: #005cab;
+            font-size: 15pt;
+            line-height: 28px;
+            padding: 0px;
+            letter-spacing: -0.4px;
+            font-family: bold
+        }
+
+        .message p span {
+            color: #ac0772;
+        }
+
+        .table_heading {
+            font-size: 11pt;
+            color: #000000;
+            font-family: 'HelveticaNeueLTPro-Bd';
+        }
+
+        .datagrid table {
+            border-collapse: collapse;
+            text-align: left;
+            width: 100%;
+        }
+
+        .datagrid {
+            background: #fff;
+            overflow: hidden;
+            border: 1px solid #005cab;
+        }
+
+        .datagrid table th {
+            padding: 10px 15px;
+            text-align: left;
+            font-size: 11pt;
+            color: #fff;
+        }
+
+        .datagrid table td {
+            padding: 5px 15px;
+            text-align: left;
+            font-size: 10.32pt;
+        }
+
+        .datagrid table thead th {
+            background: #005cab;
+            font-family: 'HelveticaNeueLTPro-Md';
+            color: #fff;
+            font-size: 11pt;
+            border-left: 1px solid #005cab;
+        }
+
+        .datagrid table thead th:first-child {
+            border: none;
+        }
+
+        .datagrid table tbody td {
+            font-family: 'HelveticaNeueLTPro-Md';
+            color: #000000;
+            font-size: 9pt;
+            border-bottom: 1px solid #005cab;
+            border-right: 1px solid #005cab;
+            font-weight: normal;
+        }
+
+        .datagrid table tbody td:last-child {
+            border-right: none;
+        }
+
+        .datagrid table tbody .alt td {
+            background: #E1EEF4;
+            color: #00496B;
+        }
+
+        .datagrid table tbody td:first-child {
+            border-left: none;
+        }
+
+        .datagrid table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .datagrid table tfoot td div {
+            border-top: 1px solid #006699;
+            background: #E1EEF4;
+        }
+
+        .datagrid table tfoot td {
+            padding: 0;
+            font-size: 12px;
+        }
+
+        .datagrid table tfoot td div {
+            padding: 2px;
+        }
+
+        .datagrid table tfoot td ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-align: right;
+        }
+
+        p.inclusion_head {
+            font-size: 11pt;
+            color: #140f06;
+        }
+
+        p.inclusion_body {
+            font-size: 9pt;
+            color: #000000;
+        }
+
+        .warning_content {
+            border: 1px solid #000;
+            float: left;
+            margin: 5px 0px;
+            width: 100%;
+        }
+
+        .warning_content h4 {
+            color: #000000;
+            font-size: 10.5pt;
+            text-align: left;
+            margin: 5px 10px;
+        }
+
+        .warning_content h5 {
+            color: #000000;
+            font-size: 9.5pt;
+            font-weight: bold;
+            text-align: left;
+            font-weight: bold;
+            margin-left: 15px;
+            text-decoration: underline;
+            margin-bottom: 0px;
+            margin-top: 0px;
+        }
+
+        .warning_content ul {
+            margin-top: 5px;
+            margin-bottom: 10px;
+            float: left;
+        }
+
+        .warning_content ul li {
+            font-size: 9.5pt;
+            line-height: 14px;
+            list-style: none;
+            margin-left: -25px;
+            width: 100%;
+            float: left;
+        }
+
+        .warning_content ul li span {
+            font-size: 9.5pt;
+            line-height: 14px;
+            list-style: none;
+        }
+
+        .content {
+            width: 100%;
+            float: left;
+            margin-bottom: 25px;
+        }
+
+        .content .pls_read {
+            color: #000000;
+            float: left;
+            width: 100%;
+            font-size: 9pt;
+        }
+
+        .content .pls_read_body {
+            color: #140f06;
+            float: left;
+            width: 100%;
+            font-size: 8pt;
+        }
+
+        .footer {
+            width: 100%;
+            float: left;
+        }
+
+        .footer p.copyright {
+            font-size: 7.5pt;
+            color: #000000;
+            line-height: 30px;
+            float: left;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Container Start -->
+        <!-- mid-container Start -->
+        <div class="mid_container">
+            <!-- Header Start -->
+            <div class="header">
+
+                <img src="/img/logo_OxiConton.png" alt="Logo" title="Logo" width="180" style="margin-left:225px; margin-top:25px;" />
+                <div class="title">
+                    <p>[This formulary information <br>is prepared for [physician/medical<br> group practice].]</p>
+                </div>
+
+            </div>
+            <!-- Header End -->
+            <!-- Message Start -->
+            <div class="message">
+                <p>[PERCENT]i [PATIENTS] in your area have unrestricted access to OxyContin® and pay [CO-PAY THRESHOLD]ii or
+                    less.
+                </p>
+            </div>
+            <!-- Message End -->
+            <!-- Table Start -->
+            <p class="table_heading">This includes patients enrolled in the following:</p>
+            <div class="datagrid">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Channel</th>
+                            <th>Plan Name</th>
+                            <th>Formulary Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>[Channel]</td>
+                            <td>[Plan Name]</td>
+                            <td>[Formulary Status]</td>
+                        </tr>
+                        <tr>
+                            <td>[Channel]</td>
+                            <td>[Plan Name]</td>
+                            <td>[Formulary Status]</td>
+                        </tr>
+                        <tr>
+                            <td>[Channel]</td>
+                            <td>[Plan Name]</td>
+                            <td>[Formulary Status]</td>
+                        </tr>
+                        <tr>
+                            <td>[Channel]</td>
+                            <td>[Plan Name]</td>
+                            <td>[Formulary Status]</td>
+                        </tr>
+                        <tr>
+                            <td>[Channel]</td>
+                            <td>[Plan Name]</td>
+                            <td>[Formulary Status]</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- Table End -->
+
+            <p class="inclusion_head">Inclusion on formulary does not imply superior clinical efficacy or safety.</p>
+            <p class="inclusion_body">Please note that formularies are subject to change. Please check with the health plan directly to confirm coverage
+                for individual patients. Patient costs may vary among plans.</p>
+            <p class="inclusion_body">Preferred represents available on formulary at the lowest branded co-pay. PDL represents on the Preferred Drug
+                List.
+            </p>
+            <p class="inclusion_body">i. Computed as patient prescriptions that can be filled with no prior authorization or step edits for Butrans®
+                divided by the total prescriptions filled in the area over a three month period.</p>
+            <p class="inclusion_body">ii. Only plans with average co-pays for Butrans® that are [CO-PAY THRESHOLD] or less are displayed. The plans’
+                co-pay ranges represent the 25th percentile cost up to the 75th percentile cost. Some patients may experience
+                co-pays higher than reflected in the message.</p>
+
+            <!-- Warning Box Start -->
+            <div class="warning_content">
+                <h4>WARNING: ADDICTION, ABUSE and MISUSE; LIFE-THREATENING RESPIRATORY DEPRESSION; ACCIDENTAL EXPOSURE; NEONATAL
+                    OPIOID WITHDRAWAL SYNDROME; and RISKS FROM CONCOMITANT USE WITH BENZODIAZEPINES OR OTHER CNS DEPRESSANTS
+                </h4>
+
+                <div style="width:50%; float:left;">
+                    <h5>Addiction, Abuse, and Misuse</h5>
+                    <ul>
+                        <li>Butrans® exposes patients and other users to the risks of opioid addiction, abuse, and misuse, which
+                            can lead to overdose and death. Assess each patient’s risk prior to prescribing Butrans, and
+                            monitor all patients regularly for the development of these behaviors and conditions <span>[see Warnings and Precautions (5.1) and Overdosage (10)].</span>                            </li>
+                        <li>CAMBIA® is contraindicated in the setting of coronary artery bypass graft (CABG) surgery.</li>
+                    </ul>
+                    <h5>Addiction, Abuse, and Misuse</h5>
+                    <ul>
+                        <li>Butrans® exposes patients and other users to the risks of opioid addiction, abuse, and misuse, which
+                            can lead to overdose and death. Assess each patient’s risk prior to prescribing Butrans, and
+                            monitor all patients regularly for the development of these behaviors and conditions <span> [see Warnings and Precautions (5.1) and Overdosage (10)].</span>                            </li>
+                        <li>CAMBIA® is contraindicated in the setting of coronary artery bypass graft (CABG) surgery.</li>
+                    </ul>
+                </div>
+
+                <div style="width:50%; float:right;">
+                    <h5>Addiction, Abuse, and Misuse</h5>
+                    <ul>
+                        <li>Butrans® exposes patients and other users to the risks of opioid addiction, abuse, and misuse, which
+                            can lead to overdose and death. Assess each patient’s risk prior to prescribing Butrans, and
+                            monitor all patients regularly for the development of these behaviors and conditions <span>[see Warnings and Precautions (5.1) and Overdosage (10)].</span>                            </li>
+                        <li>CAMBIA® is contraindicated in the setting of coronary artery bypass graft (CABG) surgery.</li>
+                    </ul>
+                    <h5>Addiction, Abuse, and Misuse</h5>
+                    <ul>
+                        <li>Butrans® exposes patients and other users to the risks of opioid addiction, abuse, and misuse, which
+                            can lead to overdose and death. Assess each patient’s risk prior to prescribing Butrans, and
+                            monitor all patients regularly for the development of these behaviors and conditions <span> [see Warnings and Precautions (5.1) and Overdosage (10)].</span>                            </li>
+                        <li>CAMBIA® is contraindicated in the setting of coronary artery bypass graft (CABG) surgery.</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Warning Box End -->
+            <!-- Content Start -->
+            <div class="content">
+                <p class="pls_read">Please read accompanying Full Prescribing Information, including Boxed Warning above.</p>
+                <p class="pls_read_body">SOURCE: All prescriptions data from IMS Health XponentTM PlanTrakTM; Commercial and Medicaid co-pay data
+                    calculated from IMS Health Formulary Impact AnalyzerTM; Medicare co-pay data calculated from CMS. Formulary
+                    data from Managed Markets Insight & Technology, LLC, database as of [Month Year].</p>
+
+            </div>
+            <!-- Content Start -->
+
+            <div class="footer">
+                <img src="/img/logo_footer.png" title="Purdue Logo" width="60" style="float:left; margin-right:15px;" />
+                <p class="copyright">©2017 Purdue Pharma L.P., Stamford, CT 06901-3431</p>
+
+                <div style="float:right;width:200px; line-height: 30px;">
+                    <p style=" font-size:10pt;color:#005cab; float:left;">www.OxyContin.com</p>
+                    <p style="font-family:arial; color:#000000; font-size:8pt; margin-left:15pt; float:right;">MR-01486</p>
+                </div>
+            </div>
+        </div>
+        <!-- mid-container Start -->
+        <!-- Footer End -->
+
+    </div>
+    <!-- Container End -->
+</body>
+
+</html>
