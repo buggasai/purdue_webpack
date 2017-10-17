@@ -59,7 +59,7 @@ export default class PdfViewer extends React.Component {
 
   render() {
     const content = sessionStorage.getItem("htmlContent");
-    const pdfUrl = "/Pdfs/" + sessionStorage.getItem("ProductKey") + ".html";
+    const pdfUrl = "/pdfs/" + sessionStorage.getItem("ProductKey") + ".html";
     $(document).ready(function() {
       setTimeout(function() {
         $("#pdfIframe")
