@@ -25,7 +25,7 @@ export default class Layout extends React.Component {
               <div className="col-md-12 bdrBtm">
                 <div className="  logo">
                   <a href="/">
-                    <img src="/img/Logo.png" title="Purdue" width="125" />
+                    <img src="/img/purdue_logo.png" title="Purdue" width="125" />
                   </a>
                 </div>
                 <div id="divMaster">
