@@ -66,7 +66,7 @@ export default class PdfViewer extends React.Component {
           .contents()
           .find("body")
           .html(content);
-      }, 100);
+      }, 500);
 
       $("#li1 a")
         .removeClass("selectedFirst")

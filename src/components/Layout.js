@@ -59,9 +59,13 @@ export default class Layout extends React.Component {
                         </Link>
                       </li>
                       <li data-itemtype="3" id="li3">
-                        <a href="PrintonDemand.aspx" className="prntDmd">
+                        <Link
+                          style={{ cursor: "pointer" }}
+                          className="prntDmd"
+                          to={`/printJsPdf`}
+                        >
                           Print on Demand
-                        </a>
+                        </Link>
                       </li>
                       <li className="links nomrgs ">
                         <a
