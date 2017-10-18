@@ -62,12 +62,12 @@ export default class SelectMessage extends React.Component {
 
     if ((idx = options.indexOf(val)) > -1) {
       options.splice(idx, 1);
-      setTimeout(function() {
+      setTimeout(function () {
         $inp.prop("checked", false);
       }, 0);
     } else {
       options.push(val);
-      setTimeout(function() {
+      setTimeout(function () {
         $inp.prop("checked", true);
       }, 0);
     }
@@ -173,7 +173,7 @@ export default class SelectMessage extends React.Component {
     var node = this.refs.myRef; // or this.refs['myRef']
     $(node)
       .select2()
-      .on("change", function() {
+      .on("change", function () {
         // this ensures the change via select2 triggers
         // the state change for your component
         self.handleChange();
@@ -235,10 +235,10 @@ export default class SelectMessage extends React.Component {
           }
         );
       },
-      function(err) {
+      function (err) {
         console.log(err);
       }
-    );
+      );
   }
 
   handleChange() {
@@ -297,13 +297,13 @@ export default class SelectMessage extends React.Component {
       );
     });
 
-    $(document).ready(function() {
+    $(document).ready(function () {
       $("[id$=ddlBrand]")
         .select2({
           placeholder: "Select Product",
           width: "280px"
         })
-        .on("select2:close", function(e) {});
+        .on("select2:close", function (e) { });
       $("#li1 a")
         .removeClass("selectedFirst")
         .addClass("active selecteddoc");
@@ -351,17 +351,32 @@ export default class SelectMessage extends React.Component {
       <div className="container-fluid">
         <div className="loader" />
         <div className="container">
-          <a id="aDoctor" className="title" href="/doctor">
+          <Link
+            id="aDoctor"
+            style={{ cursor: "pointer" }}
+            className="title"
+            to={`/doctor`}
+          >
             {sessionStorage.getItem("PrescriberName")}
-          </a>
+          </Link>
           <span className="title"> > </span>
-          <a id="aTerritory" className="title" href="/area">
+          <Link
+            id="aTerritory"
+            style={{ cursor: "pointer" }}
+            className="title"
+            to={`/area`}
+          >
             {sessionStorage.getItem("TerritoryName")}
-          </a>
+          </Link>
           <span className="title"> > </span>
-          <a id="aArea" className="title" href="/area">
+          <Link
+            id="aArea"
+            style={{ cursor: "pointer" }}
+            className="title"
+            to={`/area`}
+          >
             {sessionStorage.getItem("MarketText")}
-          </a>
+          </Link>
           <div className="content-body contentBody">
             <div className="midcont" style={{ display: "none" }}>
               <div id="dvBody">

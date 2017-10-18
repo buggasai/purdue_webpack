@@ -1,7 +1,7 @@
 'use strict';
 
 import React from 'react';
-import { Link, browserHistory  } from 'react-router';
+import { Link, browserHistory } from 'react-router';
 
 let tId = 0;
 let pId = 0;
@@ -32,9 +32,13 @@ export default class Layout extends React.Component {
                   <nav className="col-md-10 right nomrgs">
                     <ul id="ullist1">
                       <li data-itemtype="0">
-                        <a href="/area" className="selected">
+                        <Link
+                          style={{ cursor: "pointer" }}
+                          className="selected"
+                          to={`/area`}
+                        >
                           Select Area
-                        </a>
+                      </Link>
                       </li>
                       <li data-itemtype="2" id="li1">
                         <Link
